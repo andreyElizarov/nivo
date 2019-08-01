@@ -106,6 +106,7 @@ export const renderLegendToCanvas = (
         ctx.textAlign = textPropsMapping.align[labelAnchor]
         ctx.textBaseline = textPropsMapping.baseline[labelAlignment]
         ctx.fillStyle = itemTextColor || theme.legends.text.fill
+        ctx.font = theme.legends.text.font || '' 
         ctx.fillText(d.label, itemX + labelX, itemY + labelY)
     })
 
